@@ -1,0 +1,29 @@
+#contenedor_index{
+	text-aling: center;
+	background-color: none;
+	
+}
+#contenedor_login{
+	width: 40%; 
+	margin: 0 auto; 
+	text-align: left;
+	margin-top: 30%;
+	/*outline: 1px solid black;*/
+	box-shadow: 0px 0px 15px 5px #666;
+	border-radius: 10px;
+
+}
+
+.login{
+	width: 10%
+	text-align: right!;
+	box-shadow: 0px 0px 5px 5px #666;
+	border-radius:60%;	
+}
+html{
+	background-image: url('../images/bg_index.jpg'); 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}

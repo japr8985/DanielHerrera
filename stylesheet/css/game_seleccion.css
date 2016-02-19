@@ -1,0 +1,38 @@
+#Number_to_Show{
+	font-size: 40px;
+}
+#memory_board{
+	background-color: #CCC;
+	border: #999 1px solid;
+	width: 70%;
+	height: 90%;
+	padding: 30px;
+	margin: 0 auto;
+}
+#memory_board > div{
+	/*background:*/
+	border: #000 1px solid;
+	width: 200px;
+	height: 250px;
+	float: left;
+	margin: 5px;
+	padding: 20px;
+	font-size: 64px;
+	cursor: pointer;
+	text-align: center; 
+}
+.well {
+    min-height: 20px;
+    padding: 50px;
+    margin: 100px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+ }
+#Number_to_Show{
+	background-color: white;
+	width: 250px;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+}
