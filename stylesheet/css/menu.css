@@ -79,10 +79,16 @@ form[role=login] {
 	height: 150px;
 	margin: 10 10 10 10;
 	background-color: lightblue;
+	border-radius: 25px;
 }
 .result{
-	width: 150px;
+	width: 700px;
 	height: 150px;
 	margin: 10 10 10 10;
 	background-color: gray;
+	border-radius: 25px;
+	opacity: 0.5;
+}
+.no-float{
+	float:none;
 }

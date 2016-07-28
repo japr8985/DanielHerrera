@@ -105,10 +105,19 @@ function drop(c,s){
 	console.log(str);
 	var igualdad = (str[0] == str[1]) ? true : false;
 	if (igualdad) {
+		$('#div1').css('background-color',c);
 		var audio = new Audio('../stylesheet/audio/Colors/'+c+'.m4a');
         audio.play();
+        audio.addEventListener("ended", function(){
+     	audio.currentTime = 0;
+     		console.log("ended");
+     		window.location.reload();
+			});
         //window.location.reload();
 	}//reproduce el audio del color (c)
+	else{
+		alert('Color incorrecto');
+	}
 		//alert('funciona el evento drop');
 	}
 function allowDrop(ev) {

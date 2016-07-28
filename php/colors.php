@@ -14,9 +14,15 @@
 <body>
 	<?php include("_menu.php"); ?>
 	<div class="col-xs-9">
-		<div class="container center-block">
-            <span>What is the color of ...?</span>
-            <img src="" class="img-responsive" alt="" id="pic"></img>
+		<div class="container">
+            <div class="row center-block no-float">
+                <span>What is the color of ...?</span>
+            </div>
+            <div class="row">
+                <div class="col-xs-5">
+                    <img src="" class="img-responsive img-circle" alt="" id="pic"></img>
+                </div>
+            </div>
             <div class="row">
                 <div id="div1"class="result" ondrop="drop(color,colorDrag)" ondragover="allowDrop(event)"></div>
             </div>
