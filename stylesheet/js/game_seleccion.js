@@ -60,11 +60,11 @@ function shuffle(o){
 
 function init(){
     //iniciando valores
-    var num = Math.floor(Math.random() * 99) + 1;
+    var num = Math.floor(Math.random() * 10) + 1;
     var words = toWords(num);
-    var opc1 = Math.floor(Math.random() * 99) + 1;
-    var opc2 = Math.floor(Math.random() * 99) + 1 ;  
-    var opc3 = Math.floor(Math.random() * 99) + 1 ;
+    var opc1 = Math.floor(Math.random() * 10) + 1;
+    var opc2 = Math.floor(Math.random() * 10) + 1 ;  
+    var opc3 = Math.floor(Math.random() * 10) + 1 ;
     var nums = [num,opc1,opc2,opc3];
     var r = shuffle(nums); 
     //habilitando botones,
@@ -97,6 +97,9 @@ function verificar(val){
     var b = document.getElementById("Number_to_Show").innerHTML;
     if (a==b) {
         alert('Good');
+        var aud = new Audio('../audio/Grabacion.m4a');
+        aud.play();
+        //console.log(aud);
         $("#panel").load(location.href + " #panel");
         setScore(score);
         location.reload();

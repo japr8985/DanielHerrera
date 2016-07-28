@@ -6,8 +6,8 @@ $pass = $_POST['password'];
 
 if ((!empty($user))&& (!empty($pass))) {
 	$sql = "SELECT * from usuarios where name='$user' and pass='$pass'";
-	$result = mysql_query($sql) or die('Error: '.mysql_error());
-	$row = mysql_fetch_row($result);
+	$result = $mysqli->query($sql) or die('Error: '.mysql_error());
+	$row = $result->fetch_row();
 	if ($row[0]!='') {
 		$_SESSION['id']  = $row[0];
 		$_SESSION['user']=$row[1];

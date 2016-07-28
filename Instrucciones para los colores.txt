@@ -1,0 +1,19 @@
+Colores
+--------------------------------------
+Se tiene paleta de colores (SUPER BASICA)
+-amarillo
+-azul
+-rojo
+-blanco
+-negro
+-rosado
+-marron
+-verde
+-morado
+-gris
+......
+
+Se selecciona el color, y luego se hace click en una figura, 
+y se rellena con el color previamente seleccionado
+
+Se reproduce el audio luego de su insercion en la imagen

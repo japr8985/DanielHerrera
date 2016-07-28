@@ -23,12 +23,12 @@
 // *****
 /*--------------------------------------------*/
 
-	var memory_array = ['../stylesheet/images/memory/car2.jpg'		,'../stylesheet/images/memory/car2.jpg',//1
-						'../stylesheet/images/memory/tree2.jpg'		,'../stylesheet/images/memory/tree2.jpg',//2
+var memory_array = ['../stylesheet/images/memory/car.jpg'		,'../stylesheet/images/memory/car.jpg',//1
+						'../stylesheet/images/memory/tree.jpg'		,'../stylesheet/images/memory/tree.jpg',//2
 						'../stylesheet/images/memory/house.png'		,'../stylesheet/images/memory/house.png',//3
-						'../stylesheet/images/memory/cookie2.jpg'	,'../stylesheet/images/memory/cookie2.jpg',//4
-						'../stylesheet/images/memory/bike2.jpg'		,'../stylesheet/images/memory/bike2.jpg',//5
-						'../stylesheet/images/memory/dog2.jpg'		,'../stylesheet/images/memory/dog2.jpg'];//6
+						'../stylesheet/images/memory/cookie.jpg'	,'../stylesheet/images/memory/cookie.jpg',//4
+						'../stylesheet/images/memory/bike.jpg'		,'../stylesheet/images/memory/bike.jpg',//5
+						'../stylesheet/images/memory/dog.jpg'		,'../stylesheet/images/memory/dog.jpg'];//6
 var score = 0;
 var memory_values = [];
 var memory_tile_ids = [];
@@ -48,15 +48,12 @@ function newBoard(){
 	var output = '';
     memory_array.memory_tile_shuffle();
 	for(var i = 0; i < memory_array.length; i++){
-		output += '<div id="tile_'+i+'" style="background: url(../stylesheet/images/back/memory_bg.jpg);" onclick="memoryFlipTile(this,\''+memory_array[i]+'\')" ></div>';
+		output += '<div class="col-xs-9" id="tile_'+i+'" style="background: url(../stylesheet/images/back/memory_bg.jpg);" onclick="memoryFlipTile(this,\''+memory_array[i]+'\')" ></div>';
 	}
 	document.getElementById('memory_board').innerHTML = output;
 }
 
-//asigna score
-function setScore(n){
-	document.getElementById('score').innerHTML = n;
-}
+
 //giro y comprobacion
 function memoryFlipTile(tile,val){
 	if(tile.innerHTML == "" && memory_values.length < 2){
@@ -78,10 +75,15 @@ function memoryFlipTile(tile,val){
 				// Clear both arrays
 				memory_values = [];
             	memory_tile_ids = [];
-            	//realiza el score
-				score = score +	100;
-				//imprime en el html
-				setScore(score);
+            	//val viene con la extension y ruta
+            	//se debe obtener solo el nombre del archivo
+            	var filename = val.replace(/^.*[\\\/]/, '');
+            	filename = filename.split(".");
+            	//[nombre_del_archivo,extension]
+            	var file = filename[0];
+            	//alert('find it'); si son iguales reproducir audio correspondiente
+            	var audio = new Audio('../stylesheet/audio/'+file+'.mp3');
+            	audio.play();
 				// Check to see if the whole board is cleared
 				if(tiles_flipped == memory_array.length){
 					alert("Board cleared... generating new board");

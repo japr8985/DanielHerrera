@@ -4,7 +4,12 @@ $user = "root";
 $pass = "";
 $db   = "tesisdaniel";
 
-$con = mysql_connect($host,$user,$pass) or die("Error: ".mysql_error());
-$con_db = mysql_select_db($db,$con) or die("Error: ".mysql_error());
-
+/*$mysqli = new mysqli("localhost", "usuario", "contraseña", "basedatos");
+if ($mysqli->connect_errno) {
+    echo "Fallo al conectar a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+}*/
+$mysqli = new mysqli($host,$user,$pass,$db);
+if ($mysqli->connect_errno) {
+	echo "Error: ".$mysqli->connect_error;
+}
  ?>

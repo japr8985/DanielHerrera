@@ -74,3 +74,15 @@ form[role=login] {
 	.form-links a {
 		color: #fff;
 	}
+.opcColor{
+	width: 150px;
+	height: 150px;
+	margin: 10 10 10 10;
+	background-color: lightblue;
+}
+.result{
+	width: 150px;
+	height: 150px;
+	margin: 10 10 10 10;
+	background-color: gray;
+}
