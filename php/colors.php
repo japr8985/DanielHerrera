@@ -13,7 +13,7 @@
 </head>
 <body>
 	<?php include("_menu.php"); ?>
-	<div class="col-xs-9">
+    <div class="col-xs-9">
 		<div class="container">
             <div class="row center-block no-float">
                 <span>What is the color of ...?</span>

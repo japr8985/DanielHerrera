@@ -3,12 +3,15 @@ var colorDrag = '';
 //arreglo de images para jugar
 //si se desean agregar mas imagenes
 //solo debe colocar su ruta
-var img = ['../stylesheet/images/Colors/pink.jpg',
+var img = [ '../stylesheet/images/Colors/blue.png',
+			'../stylesheet/images/Colors/brown.jpg',
+			'../stylesheet/images/Colors/black.jpg',
+			'../stylesheet/images/Colors/pink.jpg',
 			'../stylesheet/images/Colors/purple.jpg',
 			'../stylesheet/images/Colors/red.png',
 			'../stylesheet/images/Colors/white.jpg',
 			'../stylesheet/images/Colors/yellow.jpg'];
-var arrayColors= ['pink','purple','red','white','yellow'];
+var arrayColors= ['pink','purple','red','white','yellow', 'blue', 'black','brown'];
 //funcion para seleccionar aleatoriamente
 //una imagen del arreglo
 function getImgRandom(img){
@@ -106,7 +109,7 @@ function drop(c,s){
 	var igualdad = (str[0] == str[1]) ? true : false;
 	if (igualdad) {
 		$('#div1').css('background-color',c);
-		var audio = new Audio('../stylesheet/audio/Colors/'+c+'.m4a');
+		var audio = new Audio('../stylesheet/audio/Colors/'+c+'.mp3');
         audio.play();
         audio.addEventListener("ended", function(){
      	audio.currentTime = 0;
@@ -116,7 +119,7 @@ function drop(c,s){
         //window.location.reload();
 	}//reproduce el audio del color (c)
 	else{
-		alert('Color incorrecto');
+		alert('Wrong Color');
 	}
 		//alert('funciona el evento drop');
 	}
@@ -130,23 +133,22 @@ function shuffle(o){
 function randomOpc(opc){
 	//se toma el arreglo global de colores
 	//se le hace shuffle
-	var colores = shuffle(arrayColors);
+	var c = shuffle(arrayColors);
 	//arreglo aux 
 	var opcColors =[];//arreglo de colores para mostrar en pantalla
-	var i =0;
 	//se dispone de 4 casillas
-	while(i < 4){
-		if (colores[i]!=opc){
-			opcColors.push(colores[i]);
-			i++;
+	//de las cuales 1 es la correcta
+	var i = 0;
+	while(opcColors.length < 3){
+		if (c[i]!=opc) {
+			opcColors.push(c[i]);
 		}
-		else{
-			opcColors.push(opc);
-			i++;
-		}
+		i++;
+		console.log(i);
 	}
 	//la ultima casilla sera para la opcion correct
-	
+	opcColors.push(opc);
+	console.log(opcColors);
 	//se vuelve a mezclar el arreglo
 	return shuffle(opcColors);
 	}
