@@ -14,46 +14,35 @@ include('_validar_session.php');
     <script type="text/javascript" src="../stylesheet/js/game_seleccion.js"></script>
     <link rel="stylesheet" type="text/css" href="../stylesheet/css/game_seleccion.css">
 </head>
-<body>
-    <div class="row">
+    <body>
         <?php include('_menu.php'); ?>
         <div class="col-sm-9 col-md-9">
-            <div class="well"><!-- PANEL DEJUEGOS -->
-                <div id="panel">
-                    <div class="row">
-                        <div class="show_number">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-sm-4 col-md-4"></div>
-                                        <div class="col-sm-2 col-md-2">
-                                            <h1>
-                                                <p id="Number_to_Show"></p>
-                                            </h1>
-                                        </div>
-                                    <div class="col-sm-3 col-md-3"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <div class="row">
-                    <div class="col-sm-3 col-md-3">
-                        <button class="btn btn-default btn-lg btn-block" id="op_1" onClick="verificar(this)" value="x"/> 
-                    </div>
-                    <div class="col-sm-3 col-md-3">
-                        <button class="btn btn-default btn-lg btn-block" id="op_2" onClick="verificar(this)" value="x"/> 
-                    </div>
-                    <div class="col-sm-3 col-md-3">
-                        <button class="btn btn-default btn-lg btn-block" id="op_3" onClick="verificar(this)" value="x"/> 
-                    </div>
-                    <div class="col-sm-3 col-md-3">
-                        <button class="btn btn-default btn-lg btn-block" id="op_4" onClick="verificar(this)" value="x"/> 
-                    </div>
+            <div class="row im-centered"><!-- numero a mostrar -->
+                <h1>
+                    <p id="Number_to_Show"></p>
+                </h1>
             </div>
+            <hr>
+            <div class="row">
+                <div class="col-sm-6 col-md-6">
+                    <button class="btn btn-default btn-lg btn-block" id="op_1" onClick="verificar(this)" value="x"/> 
                 </div>
-               
+                <div class="col-sm-6 col-md-6">
+                    <button class="btn btn-default btn-lg btn-block" id="op_2" onClick="verificar(this)" value="x"/> 
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-sm-6 col-md-6">
+                    <button class="btn btn-default btn-lg btn-block" id="op_3" onClick="verificar(this)" value="x"/> 
+                </div>
+                <div class="col-sm-6 col-md-6">
+                    <button class="btn btn-default btn-lg btn-block" id="op_4" onClick="verificar(this)" value="x"/> 
+                </div>
+            </div>  
+            </div>
         </div>
-    </div>
-</body>
+    </body>
 <script type="text/javascript">
 
     /*-------------------------------------------------------------------*/

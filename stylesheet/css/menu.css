@@ -92,3 +92,4 @@ form[role=login] {
 .no-float{
 	float:none;
 }
+.im-centered { margin: auto; max-width: 300px;}

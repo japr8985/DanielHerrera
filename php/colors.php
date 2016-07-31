@@ -15,11 +15,13 @@
 	<?php include("_menu.php"); ?>
     <div class="col-xs-9">
 		<div class="container">
-            <div class="row center-block no-float">
-                <span>What is the color of ...?</span>
+            <div class="row center-block no-float ">
+                <div class="page-header col-md-7">
+                    <h1>What is the color of ...?</h1>
+                </div>
             </div>
             <div class="row">
-                <div class="col-xs-5">
+                <div class="col-md-7 center-block no-float">
                     <img src="" class="img-responsive img-circle" alt="" id="pic"></img>
                 </div>
             </div>
