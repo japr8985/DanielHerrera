@@ -25,6 +25,11 @@
                                 <span class="glyphicon glyphicon-file text-info"></span><a href="colors.php">Colors</a>
                             </td>
                         </tr>
+                        <tr>
+                            <td>
+                                <span class="glyphicon glyphicon-file text-info"></span><a href="partofbody.php">Part of body</a>
+                            </td>
+                        </tr>
                     </table>
                 </div>
             </div>

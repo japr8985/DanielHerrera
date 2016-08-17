@@ -112,6 +112,8 @@ function drop(c,s){
 		var audio = new Audio('../stylesheet/audio/Colors/'+c+'.mp3');
         audio.play();
         audio.addEventListener("ended", function(){
+        	//evento para cuando finalice el audio 
+        	//recargue la pagina
      	audio.currentTime = 0;
      		console.log("ended");
      		window.location.reload();
