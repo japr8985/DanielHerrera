@@ -42,7 +42,7 @@
                     <area shape="poly" coords="28,415,56,423,60,455,55,459,50,468,43,476,22,458,20,439" id="Hand" onClick="bodyPart(this)"/>
                     <area shape="rect" coords="127,243,184,257" id="neck" onClick="bodyPart(this)"/>
                     <area shape="poly" coords="129,103,112,113,98,135,95,150,95,154,90,151,91,188,108,224,126,240,180,240,204,219,213,197,215,152,199,106,188,120,170,98,155,106,145,120,136,112" id="face" onClick="bodyPart(this)"/>
-                    <area shape="rect" coords="69,614,239,677" id="foot" onClick="bodyPart(this)"/>
+                    <area shape="rect" coords="69,614,239,677" id="feet" onClick="bodyPart(this)"/>
                 </map>
                 <hr>
                 <center style="vertical-align:middle;">
